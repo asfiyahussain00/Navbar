@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url(./office.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+  
+  header {
+    width: 100%;
+    background-color: rgb(30, 81, 183);
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .logo-text {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+
+    border-radius: 5px;
+    color: black;
+  }
+  
+  
+  .toggle-btn {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #nav-toggle {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      position: absolute;
+      top: 12%;
+      right: 0;
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      flex-direction: column;
+      background-color: rgb(30, 81, 183);
+      transition: height 0.3s ease;
+      
+    }
+
+
+    
+  
+    .nav-links li {
+      width: 100%;
+    }
+  
+    .nav-links a {
+      text-align: center;
+      padding: 1rem;
+      display: block;
+    }
+  
+  
+    .toggle-btn {
+      display: block;
+    }
+  
+    #nav-toggle:checked + .toggle-btn + .nav-links {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+  }
+  
